@@ -1,4 +1,52 @@
 :root {
+  /* СВЕТЛАЯ ТЕМА */
+  --color-primary: #0a84ff;
+  --color-primary-dark: #0056b3;
+  --color-bg: #f9f9f9;
+  --color-fg: #222;
+  --color-card-bg: #fff;
+  --color-footer-bg: #f9f9f9;
+  /* ... остальное как раньше ... */
+}
+
+/* ТЁМНАЯ ТЕМА */
+body.dark-theme {
+  --color-bg: #1a1a1a;
+  --color-fg: #f0f0f0;
+  --color-card-bg: #23272a;
+  --color-footer-bg: #1a1a1a;
+  --color-primary: #6aa2ff;
+  --color-primary-dark: #4975b3;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  transition: background 0.25s, color 0.25s;
+}
+
+.header__logo {
+  color: var(--color-primary);
+}
+
+.theme-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--color-fg);
+  transition: color 0.25s;
+}
+
+.feature-card {
+  background: var(--color-card-bg);
+}
+
+.footer {
+  background: var(--color-footer-bg);
+}
+:root {
   --color-primary: #0a84ff;
   --color-primary-dark: #0056b3;
   --color-bg: #f9f9f9;

@@ -1,3 +1,28 @@
+// Переключатель тёмной/светлой темы
+const themeToggleBtn = document.getElementById('themeToggle');
+const body = document.body;
+
+function setTheme(theme) {
+  if (theme === 'dark') {
+    body.classList.add('dark-theme');
+    themeToggleBtn.textContent = '☀️';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    body.classList.remove('dark-theme');
+    themeToggleBtn.textContent = '🌙';
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// При загрузке страницы тема сохраняется
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+});
+
+themeToggleBtn.addEventListener('click', () => {
+  setTheme(body.classList.contains('dark-theme') ? 'light' : 'dark');
+});
 // Меню для мобильных устройств
 const menuBtn = document.querySelector('.header__menu-btn');
 const navList = document.querySelector('.site-nav__list');
