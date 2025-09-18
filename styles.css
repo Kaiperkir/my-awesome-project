@@ -1,0 +1,112 @@
+/* Добавьте эти стили в конец файла */
+
+
+/* Стили для модального окна */
+dialog {
+    padding: var(--space-3);
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для формы */
+.form-actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: var(--space-2);
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2) var(--space-3);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border-radius: var(--radius);
+}
+
+button:hover,
+button:focus-visible {
+    background: #0056b3;
+    outline: none;
+}
+
+/* Состояния для ссылок */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+/* Стили для навигации по БЭМ */
+.site-nav {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+}
+
+.site-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--space-3);
+}
+
+.site-nav__item {
+    /* Пустое правило, удалите, если не нужно */
+}
+
+.site-nav__link {
+    color: var(--color-fg);
+    transition: color 0.2s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+    color: var(--color-primary);
+    outline: none;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .site-nav__list {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}

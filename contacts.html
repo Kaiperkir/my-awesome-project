@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Контакты - Название вашего сайта</title>
-    <meta name="description" content="Контактная информация нашей компании">
+    <meta name="description" content="Контактная информация нашей компании" />
 </head>
 <body>
-    <header>
-        <a href="/">Логотип или название сайта</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <a href="/" class="header__brand">Логотип или название сайта</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link nav__link--active">Контакты</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> - <span>Контакты</span>
+    <main class="main">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html" class="breadcrumbs__link">Главная</a> - <span class="breadcrumbs__current">Контакты</span>
         </nav>
-        <h1>Контактная информация</h1>
-        <section>
-            <p>Телефон: +7 (495) 123-45-67</p>
-            <p>Email: example@mail.com</p>
+        <h1 class="page-title">Контактная информация</h1>
+        <section class="contacts">
+            <p class="contacts__phone">Телефон: +7 (495) 123-45-67</p>
+            <p class="contacts__email">Email: example@mail.com</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+        <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
 </html>

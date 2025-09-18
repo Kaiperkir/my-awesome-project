@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>О нас - Название вашего сайта</title>
-    <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <meta name="description" content="Узнайте больше о нашей компании и истории" />
 </head>
 <body>
-    <header>
-        <a href="/">Логотип или название сайта</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <a href="/" class="header__brand">Логотип или название сайта</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="about.html" class="nav__link nav__link--active">О нас</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a> - <span>О нас</span>
+    <main class="main">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html" class="breadcrumbs__link">Главная</a> - <span class="breadcrumbs__current">О нас</span>
         </nav>
-        <h1>О нашей компании</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Текст о том, как все начиналось...</p>
+        <h1 class="page-title">О нашей компании</h1>
+        <section class="about">
+            <h2 class="about__heading">Наша история</h2>
+            <p class="about__text">Текст о том, как все начиналось...</p>
         </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Текст о команде...</p>
+        <section class="about">
+            <h2 class="about__heading">Наша команда</h2>
+            <p class="about__text">Текст о команде...</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
-</body>
-</html>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+        <p class="footer
