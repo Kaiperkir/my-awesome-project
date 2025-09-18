@@ -13,7 +13,6 @@
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Общие сбросы */
 *,
 *::before,
 *::after {
@@ -28,7 +27,6 @@ body {
   line-height: 1.5;
 }
 
-/* Контейнер */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -36,7 +34,6 @@ body {
   margin-right: auto;
 }
 
-/* Хедер */
 .header {
   background-color: #fff;
   box-shadow: var(--shadow);
@@ -56,7 +53,6 @@ body {
   text-decoration: none;
 }
 
-/* Навигация */
 .site-nav__list {
   list-style: none;
   display: flex;
@@ -83,7 +79,6 @@ body {
   font-weight: 700;
 }
 
-/* Буттон меню для мобильных */
 .header__menu-btn {
   display: none;
   font-size: 1.5rem;
@@ -93,14 +88,12 @@ body {
   cursor: pointer;
 }
 
-/* Мобильное меню открыто */
 .site-nav__list--open {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
 }
 
-/* Герой секция */
 .hero {
   padding: var(--space-5) 0;
   background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
@@ -118,7 +111,6 @@ body {
   margin-bottom: var(--space-4);
 }
 
-/* Кнопки */
 .btn {
   display: inline-block;
   background: var(--color-primary);
@@ -134,11 +126,6 @@ body {
 .btn-primary:focus-visible {
   background-color: var(--color-primary-dark);
   outline: none;
-}
-
-/* Контентные секции */
-.container h1, .container h2 {
-  font-weight: 700;
 }
 
 .features {
@@ -171,7 +158,6 @@ body {
   color: #555;
 }
 
-/* Хлебные крошки */
 .breadcrumbs {
   margin-block: var(--space-3);
   font-size: 0.9rem;
@@ -192,7 +178,6 @@ body {
   color: var(--color-fg);
 }
 
-/* Контакты */
 .contacts-info p {
   margin: var(--space-1) 0;
 }
@@ -201,7 +186,6 @@ body {
   margin-top: var(--space-4);
 }
 
-/* Модальное окно */
 .modal {
   max-width: 400px;
   padding: var(--space-4);
@@ -258,20 +242,19 @@ textarea {
   outline: none;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
   .header__menu-btn {
     display: block;
   }
-
+  
   .site-nav__list {
     display: none;
   }
-
+  
   .site-nav__list--open {
     display: flex;
   }
-
+  
   .features {
     flex-direction: column;
   }

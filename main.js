@@ -35,7 +35,7 @@ if (openFormBtn && contactDialog && closeFormBtn && contactForm) {
       contactForm.reportValidity();
       return;
     }
-    // Здесь подключить реальную отправку формы, если нужно
+    // Тут можно подключить реальную отправку
     alert('Спасибо за сообщение!');
     contactDialog.close();
     contactForm.reset();

@@ -21,40 +21,30 @@
       <button class="header__menu-btn" aria-label="Открыть меню" aria-expanded="false">&#9776;</button>
     </div>
   </header>
-
   <main class="main container">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a href="index.html" class="breadcrumbs__link">Главная</a> &raquo; <span class="breadcrumbs__current">Контакты</span>
     </nav>
-
     <h1>Контактная информация</h1>
-
     <section class="contacts-info">
       <p>Телефон: +7 (495) 123-45-67</p>
       <p>Email: example@mail.com</p>
       <p>Адрес: г. Москва, ул. Примерная, д.1</p>
     </section>
-
     <section class="contact-form">
       <button id="openContactForm" class="btn btn-primary">Связаться с нами</button>
     </section>
-
-    <!-- Модальное окно с формой -->
     <dialog id="contactDialog" class="modal" aria-labelledby="contactDialogTitle" hidden>
       <h2 id="contactDialogTitle">Обратная связь</h2>
       <form id="contactForm" novalidate>
         <label for="name">Имя</label>
         <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name" />
-        
         <label for="email">Email</label>
         <input id="email" name="email" type="email" required autocomplete="email" />
-        
         <label for="phone">Телефон</label>
         <input id="phone" name="phone" type="tel" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder="+7 (999) 123-45-67" />
-
         <label for="message">Сообщение</label>
         <textarea id="message" name="message" required></textarea>
-
         <div class="form-actions">
           <button type="button" id="closeContactForm">Закрыть</button>
           <button type="submit" class="btn btn-primary">Отправить</button>
@@ -62,7 +52,6 @@
       </form>
     </dialog>
   </main>
-
   <footer class="footer">
     <div class="container footer__container">
       <p>&copy; 2023 Ваш сайт. Все права защищены.</p>
