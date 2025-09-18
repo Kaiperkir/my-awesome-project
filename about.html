@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>О нас - Название вашего сайта</title>
-    <meta name="description" content="Узнайте больше о нашей компании и истории" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>О нас - Ваш сайт</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="/" class="header__brand">Логотип или название сайта</a>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                <li class="nav__item"><a href="about.html" class="nav__link nav__link--active">О нас</a></li>
-                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            <a href="index.html" class="breadcrumbs__link">Главная</a> - <span class="breadcrumbs__current">О нас</span>
-        </nav>
-        <h1 class="page-title">О нашей компании</h1>
-        <section class="about">
-            <h2 class="about__heading">Наша история</h2>
-            <p class="about__text">Текст о том, как все начиналось...</p>
-        </section>
-        <section class="about">
-            <h2 class="about__heading">Наша команда</h2>
-            <p class="about__text">Текст о команде...</p>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p class="footer
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">YourSite</a>
+      <nav class="site-nav" role="navigation" aria-label="Главное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="about.html" class="site-nav__link site-nav__link--active">О нас</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__menu-btn" aria-label="Открыть меню" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="main container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="breadcrumbs__link">Главная</a> &raquo; <span class="breadcrumbs__current">О нас</span>
+    </nav>
+
+    <h1>О нашей компании</h1>
+
+    <section class="about__history">
+      <h2>Наша история</h2>
+      <p>Текст о том, как все начиналось...</p>
+    </section>
+
+    <section class="about__team">
+      <h2>Наша команда</h2>
+      <p>Текст о команде...</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2023 Ваш сайт. Все права защищены.</p>
+      <p>Телефон: +7 (123) 456-78-90</p>
+    </div>
+  </footer>
+</body>
+</html>

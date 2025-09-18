@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Контакты - Название вашего сайта</title>
-    <meta name="description" content="Контактная информация нашей компании" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакты - Ваш сайт</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="/" class="header__brand">Логотип или название сайта</a>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                <li class="nav__item"><a href="about.html" class="nav__link">О нас</a></li>
-                <li class="nav__item"><a href="contacts.html" class="nav__link nav__link--active">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            <a href="index.html" class="breadcrumbs__link">Главная</a> - <span class="breadcrumbs__current">Контакты</span>
-        </nav>
-        <h1 class="page-title">Контактная информация</h1>
-        <section class="contacts">
-            <p class="contacts__phone">Телефон: +7 (495) 123-45-67</p>
-            <p class="contacts__email">Email: example@mail.com</p>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-    </footer>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">YourSite</a>
+      <nav class="site-nav" role="navigation" aria-label="Главное меню">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a href="index.html" class="site-nav__link">Главная</a></li>
+          <li class="site-nav__item"><a href="about.html" class="site-nav__link">О нас</a></li>
+          <li class="site-nav__item"><a href="contacts.html" class="site-nav__link site-nav__link--active">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="header__menu-btn" aria-label="Открыть меню" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="main container">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="index.html" class="breadcrumbs__link">Главная</a> &raquo; <span class="breadcrumbs__current">Контакты</span>
+    </nav>
+
+    <h1>Контактная информация</h1>
+
+    <section class="contacts-info">
+      <p>Телефон: +7 (495) 123-45-67</p>
+      <p>Email: example@mail.com</p>
+      <p>Адрес: г. Москва, ул. Примерная, д.1</p>
+    </section>
+
+    <section class="contact-form">
+      <button id="openContactForm" class="btn btn-primary">Связаться с нами</button>
+    </section>
+
+    <!-- Модальное окно с формой -->
+    <dialog id="contactDialog" class="modal" aria-labelledby="contactDialogTitle" hidden>
+      <h2 id="contactDialogTitle">Обратная связь</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name" />
+        
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+        
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder="+7 (999) 123-45-67" />
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <div class="form-actions">
+          <button type="button" id="closeContactForm">Закрыть</button>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2023 Ваш сайт. Все права защищены.</p>
+      <p>Телефон: +7 (123) 456-78-90</p>
+    </div>
+  </footer>
 </body>
 </html>
